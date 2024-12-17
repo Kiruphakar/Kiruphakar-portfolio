@@ -50,7 +50,8 @@
         <!-- Mobile NAv Toggle -->
         <i class="fa-solid fa-bars" id="Menubtn"></i>
         <!-- ====Header End==== -->
-
+         <!-- Upper arrow  -->
+         
 
         <!-- ====All Body Content====-->
         <main>
@@ -445,11 +446,12 @@
                 <h1 class="sub-heading">Service</h1>
                 <div class="divider"></div>
                 <p class="sub-para">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Esse quis, expedita natus ab eos provident assumenda 
-                    accusamus consequatur dolor perferendis doloremque 
-                    repudiandae nulla odit ad, veritatis labore, eius deserunt
-                    obcaecati!</p>
+                    Kiruphakar N is a web developer with a Bachelor’s degree in Computer Science Engineering, 
+                    graduated in 2024. Proficient in HTML, CSS, JavaScript, and frameworks like React, Kiruphakar 
+                    has hands-on experience in Node.js and MySQL . Committed to creating responsive applications
+                    and delivering high-quality code, Kiruphakar is eager to contribute to innovative projects 
+                    and collaborate with a dynamic team to enhance digital experiences.
+                </p>
 
                 <div class="service-row">
                     <!-- service 1 -->
@@ -474,11 +476,11 @@
                             <h4>Front-End Development:</h4>
                                 <p>With expertise in HTML, CSS, and JavaScript, I focus on building visually appealing and interactive user interfaces. 
                                     I ensure that your website not only looks great but also functions seamlessly across all devices.
-                                    </p>
+                                </p>
                         </div>
-                     </div>
-                     <!-- service 3 -->
-                     <div class="service-box">
+                    </div>
+                    <!-- service 3 -->
+                    <div class="service-box">
                         <div class="icon">
                             <i class="fa-solid fa-chart-bar"></i>
                         </div>
@@ -520,9 +522,10 @@
                         </div>
                         <div class="ser-info">
                             <h4>Responsive Design:</h4>
-                                <p>I prioritize responsive design in all my projects, ensuring that your website looks and functions perfectly on desktops, tablets, and mobile devices. 
+                                <p> I prioritize responsive design in all my projects, ensuring that your website 
+                                    looks and functions perfectly on desktops, tablets, and mobile devices. 
                                     This approach enhances user experience and improves search engine rankings.
-                                    </p>
+                                </p>
                         </div>
                      </div>
                 </div>
@@ -588,68 +591,75 @@
                     </div>
                     <script>
                         function sendEmail(event) {
-                event.preventDefault(); // Prevent default form submission
-                // Collect form data
-                const fullname = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const mobileno = document.getElementById('mobileno').value;
-                const subject = document.getElementById('subject').value;
-                const message = document.getElementById('msg').value;
-                // Construct the mailto link
-                const mailtoLink = `kiruphakarnarasimman@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-                    `Name: ${name}\nEmail: ${email}\nMobile No: ${mobileno}\n\nMessage:\n${msg}`
-                )}`;
-                
-                // Open the mailto link
-                window.location.href = mailtoLink;
-                }
+                            event.preventDefault(); // Prevent default form submission
+                            // Collect form data
+                            const fullname = document.getElementById('name').value;
+                            const email = document.getElementById('email').value;
+                            const mobileno = document.getElementById('mobileno').value;
+                            const subject = document.getElementById('subject').value;
+                            const message = document.getElementById('msg').value;
+                            // Construct the mailto link
+                            const mailtoLink = `kiruphakarnarasimman@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+                                `Name: ${name}\nEmail: ${email}\nMobile No: ${mobileno}\n\nMessage:\n${msg}`
+                            )}`;
+                            
+                            // Open the mailto link
+                            window.location.href = mailtoLink;
+                            }
                     </script>
               </section>
               
 
         </main>
+        <i class="fa-solid fa-angle-up" id="up-arrow"></i>
+        <script>
+             // Scroll to the home section when the up-arrow is clicked
+            document.getElementById('up-arrow').addEventListener('click', function() {
+                document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+            });
+        </script>
          <!-- Typed.JS file(For Typing Effect) -->
           <script src="script2.js"></script>
        <!-- script -->
         <script src="script.js">
             // header toggle
 
-let Menubtn = document.getElementById('Menubtn')
+            let Menubtn = document.getElementById('Menubtn')
 
-Menubtn.addEventListener('click',function(e){
-    document.querySelector('body').classList.toggle('mobile-nav-active');
-    this.classList.toggle('fa-xmark')
-})
+            Menubtn.addEventListener('click',function(e){
+                document.querySelector('body').classList.toggle('mobile-nav-active');
+                this.classList.toggle('fa-xmark')
+            })
 
-// Typed Effect
+            // Typed Effect
 
-let typed=new Typed('.auto-input',{
-    strings:['Front-End Developer!','Freelancer!','YouTuber!'],
-    typeSpeed:100,
-    backSpeed:100,
-    backDelay:2000,
-    loop:true,
-})
-// Action link state on Scroll
+            let typed=new Typed('.auto-input',{
+                strings:['Front-End Developer!','Freelancer!','YouTuber!'],
+                typeSpeed:100,
+                backSpeed:100,
+                backDelay:2000,
+                loop:true,
+            })
+            // Action link state on Scroll
 
-//Get all links with class "nav-link"
-let navLinks=document.querySelectorAll('nav ul li a')
-//Add event listener to each link
-let sections=document.querySelectorAll('section')
+            //Get all links with class "nav-link"
+            let navLinks=document.querySelectorAll('nav ul li a')
+            //Add event listener to each link
+            let sections=document.querySelectorAll('section')
 
-window.addEventListener('scroll', function(){
-    const scrollPos=window.scrollY + 20
-    sections.forEach(section => {
-              if(scrollPos > section.offsetTop && scrollPos < (section.offsetTop + section.offsetHeight)){
-                navLinks.forEach(link =>{
-                    link.classList.remove('active');
-                    if(section.getAttribute('id')=== link.getAttribute('href').substring(1)){
-                        link.classList.add('active')
-                    }
+            window.addEventListener('scroll', function(){
+                const scrollPos=window.scrollY + 20
+                sections.forEach(section => {
+                        if(scrollPos > section.offsetTop && scrollPos < (section.offsetTop + section.offsetHeight)){
+                            navLinks.forEach(link =>{
+                                link.classList.remove('active');
+                                if(section.getAttribute('id')=== link.getAttribute('href').substring(1)){
+                                    link.classList.add('active')
+                                }
+                            });
+                        }
                 });
-              }
-    });
-});
+            });
         </script>
         <script src="https://kit.fontawsome.com/aa5f332820.js" crossorgin="anonymous"></script>
     </body>

@@ -36,3 +36,10 @@ window.addEventListener('scroll', function(){
               }
     });
 });
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        // Remove the mobile-nav-active class when a link is clicked
+        document.querySelector('body').classList.remove('mobile-nav-active');
+        Menubtn.classList.remove('fa-xmark'); // Optionally remove the icon change
+    });
+});

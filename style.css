@@ -14,9 +14,9 @@
     --theme:#0a7a82;
     --theme2:#0ef;
     --iconbg:#2C2F3F;
-    --txt:#353535;
+    --txt:#000000;
     --bg:#f7f7f7;
-}
+} 
 
 
 /* Header */
@@ -537,7 +537,7 @@ main{
     background: linear-gradient(to right, #94c6f8, #579aff,#438ae6);
     border-radius: 20px;
 }
-#skill .skill-row .skill-box:hover .skill-outer-line .skill-inner-line{
+#skill .skill-row .skill-box:hover .skill-outer-line {
     height: 10px;
     box-shadow: 0 0 20px var(--theme2);
     border-radius: 20px;

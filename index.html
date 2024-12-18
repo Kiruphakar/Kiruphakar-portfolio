@@ -25,8 +25,7 @@
                     <a href="https://x.com/KiruphakarN?t=x3Nf4LVNG3KopI4o_K0XvQ&s=09"><i class="fa-brands fa-x-twitter"></i></a>
                 </div>
             </div>
-
-
+            
             <!-- navbars -->
             <nav>
                 <ul>
@@ -119,7 +118,6 @@
             </section>
 
             <!-- About Section END -->
-
 
             <!-- -------------------------------------------------------------------------- -->
 
@@ -364,13 +362,11 @@
                             </div>
                             <div class="port-info">
                                 <h4> Image editor website:</h4>
-                                <p>This HTML document describes a simple image editor web application that allows users to upload 
-                                    images and apply various filters such as brightness, saturation, and contrast, along with transformations 
-                                    like rotation and flipping. The app features a vibrant design with a responsive layout, ensuring usability 
-                                    on both desktop and mobile devices. Users can preview their edits in real-time and easily reset filters or 
-                                    save the edited images. JavaScript handles the functionality, providing an interactive experience for enhancing images..
-                                    </p>
-                                    <a href="https://image-editor-kiruphakar-s-projects.vercel.app/"><i class="fa-solid fa-up-right-from-square"></i></a>
+                                <p>This HTML document describes an image editor app where users can 
+                                    upload images, apply filters and transformations, and preview edits 
+                                    in real-time. It features a responsive design and JavaScript-based interactivity.
+                                </p>
+                                <a href="https://image-editor-kiruphakar-s-projects.vercel.app/"><i class="fa-solid fa-up-right-from-square"></i></a>
                             </div>
                         </div>
                         <!-- port item-2 -->
@@ -380,12 +376,12 @@
                             </div>
                             <div class="port-info">
                                 <h4>Weather application:</h4>
-                                <p>This weather application allows users to check real-time weather information for any city. It features a search bar 
-                                    where users can enter a city name, and upon submission, it fetches data from the OpenWeatherMap API. The app displays 
-                                    the city's name, current temperature, humidity, and wind speed, along with a corresponding weather icon. The design 
-                                    is modern and user-friendly, providing an engaging experience for users.
-                                    </p>
-                                    <a href="https://weather-app-kiruphakar-s-projects.vercel.app/"><i class="fa-solid fa-up-right-from-square"></i></a>
+                                <p>
+                                    This weather app lets users check real-time weather by searching 
+                                    a city. It displays temperature, humidity, wind speed, and a weather icon, 
+                                    using data from the OpenWeatherMap API. The design is modern and user-friendly.
+                                </p>
+                                <a href="https://weather-app-kiruphakar-s-projects.vercel.app/"><i class="fa-solid fa-up-right-from-square"></i></a>
                             </div>
                         </div>
                         <!-- port item 3 -->
@@ -576,7 +572,7 @@
                                 </div>
                             </div>
                             <div id="map">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3764.49548023155!2d77.71329307805358!3d11.318431220276237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDE5JzA2LjMiTiA3N8KwNDMnMDUuNCJF!5e1!3m2!1sen!2sin!4v1733557922258!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3764.49548023155!2d77.71329307805358!3d11.318431220276237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDE5JzA2LjMiTiA3N8KwNDMnMDUuNCJF!5e1!3m2!1sen!2sin!4v1733557922258!5m2!1sen!2sin" width="100%" height="250" style="border:20px;" allowfullscreen="null" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                         <!-- Right col -->
@@ -612,59 +608,34 @@
                             }
                     </script>
               </section>
+              <!-- End of Contact Section -->
+               
               
 
         </main>
-        <i class="fa-solid fa-angle-up" id="up-arrow"></i>
+        <!-- End of Main Section -->
+         
+        <i class='bx bxs-chevrons-up'id="up-arrow" ></i>
         <script>
-             // Scroll to the home section when the up-arrow is clicked
-            document.getElementById('up-arrow').addEventListener('click', function() {
-                document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+             // Scroll to the home section when the up-arrow is clicked 
+            document.getElementById('up-arrow').addEventListener('click', function() { 
+                document.getElementById('home').scrollIntoView({ behavior: 'smooth' }); 
+            });
+
+            // Show/hide the up-arrow based on scroll position
+            window.addEventListener('scroll', function() {
+                const upArrow = document.getElementById('up-arrow');
+                if (window.scrollY === 0) { // Check if at the top of the page
+                    upArrow.style.display = 'none'; // Hide the up-arrow
+                } else {
+                    upArrow.style.display = 'block'; // Show the up-arrow
+                }
             });
         </script>
          <!-- Typed.JS file(For Typing Effect) -->
           <script src="script2.js"></script>
        <!-- script -->
-        <script src="script.js">
-            // header toggle
-
-            let Menubtn = document.getElementById('Menubtn')
-
-            Menubtn.addEventListener('click',function(e){
-                document.querySelector('body').classList.toggle('mobile-nav-active');
-                this.classList.toggle('fa-xmark')
-            })
-
-            // Typed Effect
-
-            let typed=new Typed('.auto-input',{
-                strings:['Front-End Developer!','Freelancer!','YouTuber!'],
-                typeSpeed:100,
-                backSpeed:100,
-                backDelay:2000,
-                loop:true,
-            })
-            // Action link state on Scroll
-
-            //Get all links with class "nav-link"
-            let navLinks=document.querySelectorAll('nav ul li a')
-            //Add event listener to each link
-            let sections=document.querySelectorAll('section')
-
-            window.addEventListener('scroll', function(){
-                const scrollPos=window.scrollY + 20
-                sections.forEach(section => {
-                        if(scrollPos > section.offsetTop && scrollPos < (section.offsetTop + section.offsetHeight)){
-                            navLinks.forEach(link =>{
-                                link.classList.remove('active');
-                                if(section.getAttribute('id')=== link.getAttribute('href').substring(1)){
-                                    link.classList.add('active')
-                                }
-                            });
-                        }
-                });
-            });
-        </script>
+        <script src="script.js"></script>
         <script src="https://kit.fontawsome.com/aa5f332820.js" crossorgin="anonymous"></script>
     </body>
 </html>

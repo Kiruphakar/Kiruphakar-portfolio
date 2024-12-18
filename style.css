@@ -534,7 +534,7 @@ main{
 }
 #skill .skill-row .skill-box .skill-outer-line .skill-inner-line{
     height: 10px;
-    background-color: var(--theme);
+    background: linear-gradient(to right, #94c6f8, #579aff,#438ae6);
     border-radius: 20px;
 }
 #skill .skill-row .skill-box:hover .skill-outer-line .skill-inner-line{
@@ -778,11 +778,16 @@ main{
         grid-template-columns: repeat(2,1fr);
         grid-gap: 15px;
     }
+   
 }
+
 @media only screen and (max-width:550px){
     #portfolio .port-row{
         grid-template-columns: repeat(1,1fr);
         grid-gap: 15px;
+    }
+    #portfolio .port-row .port-item .port-info p{
+        font-size: 5px;
     }
 }
 /* -------------------------------------------------------- */
@@ -975,7 +980,7 @@ main{
         gap:20px;
     }
 }
-#contact .contact-row .contact-left map iframe:hover{
+#contact .contact-row .contact-left .map iframe:hover{
     box-shadow: 0 0 20px var(--theme);
     border: 2px solid var(--theme);
     border-radius: 30%;

@@ -319,6 +319,24 @@ main{
     margin-top: 25px;
 }
 
+
+/* download resume */
+.download-resume-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--theme);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.download-resume-btn:hover {
+    background-color: #579aff;
+}
+
+
 /* ========About col======== */
 
 #about .about-col .img-col{

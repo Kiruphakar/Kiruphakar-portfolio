@@ -116,7 +116,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <a href="Kiruphakar N .pdf" download class="download-resume-btn">Download Resume</a>
+                            <a href="images/Kiruphakar N .pdf" download class="download-resume-btn">Download Resume</a>
                       </div>
                 </div>
             </section>
@@ -584,34 +584,48 @@
                         <!-- Right col -->
                         <div class="contact-right">
                             <h2>To Contact</h2>
-                            <form action="">
+                            <form onsubmit="sendEmail(event)">
                                 <input type="text" name="name" id="name" placeholder="Your Name" required>
                                 <input type="email" name="email" id="email" placeholder="Your Email" required>
-                                <input type="tel" name="mobileno" id="mobileno" placeholder="Mobile No"required>
-                                <input type="text" name="subject" id="subject" placeholder="Subject"required>
-                                <textarea name="msg" id="msg" rows="9" placeholder="Your Message"></textarea>
+                                <input type="tel" name="mobileno" id="mobileno" placeholder="Mobile No" required>
+                                <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                                <textarea name="msg" id="msg" rows="9" placeholder="Your Message" required></textarea>
                                 <input type="submit" value="Send Message">
-
                             </form>
                         </div>
                     </div>
                     <script>
                         function sendEmail(event) {
-                            event.preventDefault(); // Prevent default form submission
-                            // Collect form data
-                            const fullname = document.getElementById('name').value;
-                            const email = document.getElementById('email').value;
-                            const mobileno = document.getElementById('mobileno').value;
-                            const subject = document.getElementById('subject').value;
-                            const message = document.getElementById('msg').value;
-                            // Construct the mailto link
-                            const mailtoLink = `kiruphakarnarasimman@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-                                `Name: ${name}\nEmail: ${email}\nMobile No: ${mobileno}\n\nMessage:\n${msg}`
-                            )}`;
-                            
-                            // Open the mailto link
-                            window.location.href = mailtoLink;
-                            }
+    event.preventDefault(); // Prevent default form submission
+
+    // Collect form data
+    const fullname = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const mobileno = document.getElementById('mobileno').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('msg').value.trim();
+
+    // Basic validation
+    if (!fullname || !email || !mobileno || !subject || !message) {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    // Validate email format
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    // Construct the mailto link
+    const mailtoLink = `mailto:kiruphakarnarasimman@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+        `Name: ${fullname}\nEmail: ${email}\nMobile No: ${mobileno}\n\nMessage:\n${message}`
+    )}`;
+
+    // Open the mailto link
+    window.location.href = mailtoLink;
+}
                     </script>
             </section>
             <!-- End of Contact Section -->

@@ -4,7 +4,7 @@
         <meta charset="Utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Perosnal Portfolio Web Design </title>
+        <title>Personal Portfolio Web Design </title>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -25,7 +25,8 @@
                     <a href="https://x.com/KiruphakarN?t=x3Nf4LVNG3KopI4o_K0XvQ&s=09"><i class="fa-brands fa-x-twitter"></i></a>
                 </div>
             </div>
-            
+
+
             <!-- navbars -->
             <nav>
                 <ul>
@@ -42,18 +43,17 @@
 
             <!--footer-->
             <div class="footer">
-                <p>&copy;Copyright 2023 <br>Designed by <a href="https://www.linkedin.com/in/kiruphakar-narasimman-15b631281?utm_source=share&utm_compaign=share_via&utm_content=profile&utm_medium=android_app" target="_black">Kiruphakar</a></p>
-            </div>
+                <p>&copy;Copyright 2023 <br>Designed by <a href="https://kiruphakarnarasimman.com" target="_black">Kiruphakar</a></p>
+              </div>
         </header>
-        <!-- ====Header End==== -->
         
         <!-- Mobile NAv Toggle -->
         <i class="fa-solid fa-bars" id="Menubtn"></i>
-        
-        
-        
-        <!-- ====All Body Content==== -->
-        <!-- ====Main Section==== -->
+        <!-- ====Header End==== -->
+         <!-- Upper arrow  -->
+         
+
+        <!-- ====All Body Content====-->
         <main>
 
             <!-- Home Section Starts -->
@@ -77,8 +77,6 @@
                         background has equipped me with a solid foundation in programming, 
                         software development, and problem-solving skills.
                     </p>
-
-                    
 
                     <div class="about-col">
 
@@ -116,12 +114,12 @@
                                     </ul>
                                 </div>
                             </div>
-                            <a href="images/Kiruphakar N .pdf" download class="download-resume-btn">Download Resume</a>
                       </div>
                 </div>
             </section>
 
             <!-- About Section END -->
+
 
             <!-- -------------------------------------------------------------------------- -->
 
@@ -179,7 +177,7 @@
                     for version control and creating responsive, mobile-first designs that ensure 
                     cross-browser compatibility. Strong problem-solving abilities and a commitment to 
                     continuous learning keep me updated with the latest trends and best practices in 
-                    web development</p>
+                    web development.</p>
 
                     <div class="skill-row">
                         <!-- Skill Box 1 -->
@@ -206,7 +204,7 @@
                         </div>
                         <!-- Skill Box 3 -->
                         <div class="skill-box">
-                            
+
                             <div class="skill-info">
                                 <h2>JavaScript</h2>
                                 <h2>60%</h2>
@@ -255,9 +253,9 @@
             <!-- ------------------------------------------------ -->
             <!-- ------------------Resume start------------------ -->
             <section id="resume">
-                    <h1 class="sub-heading">Resume</h1> 
+                    <h1 class="sub-heading">Resume</h1>
                     <div class="divider"></div>
-                    <p class="sub-para"> 
+                    <p class="sub-para">
                         Detail-oriented and passionate web developer with a Bachelor’s degree in 
                         Computer Science Engineering, graduated in 2024. Proficient in front-end 
                         technologies including HTML, CSS, and JavaScript, with hands-on experience 
@@ -275,12 +273,10 @@
                             <h2>Summary</h2>
                             <div class="myinfo">
                                 <h3>Kiruphakar N</h2>
-                                <p>
-                                    Web developer with a Bachelor’s in Computer Science Engineering (2024). 
+                                <p>Web developer with a Bachelor’s in Computer Science Engineering (2024). 
                                     Proficient in HTML, CSS, JavaScript, and frameworks like React. 
                                     Experienced in Node.js, Express, MySQL, and MongoDB. Committed to 
-                                    creating responsive applications and delivering high-quality code.
-                                </p>
+                                    creating responsive applications and delivering high-quality code.</p>
                                      <ul>
                                         <li>Erode,TamilNadu,India</li>
                                         <li>+91 88706-04114</li>
@@ -584,74 +580,56 @@
                         <!-- Right col -->
                         <div class="contact-right">
                             <h2>To Contact</h2>
-                            <form onsubmit="sendEmail(event)">
+                            <form action="">
                                 <input type="text" name="name" id="name" placeholder="Your Name" required>
                                 <input type="email" name="email" id="email" placeholder="Your Email" required>
-                                <input type="tel" name="mobileno" id="mobileno" placeholder="Mobile No" required>
-                                <input type="text" name="subject" id="subject" placeholder="Subject" required>
-                                <textarea name="msg" id="msg" rows="9" placeholder="Your Message" required></textarea>
+                                <input type="tel" name="mobileno" id="mobileno" placeholder="Mobile No"required>
+                                <input type="text" name="subject" id="subject" placeholder="Subject"required>
+                                <textarea name="msg" id="msg" rows="9" placeholder="Your Message"></textarea>
                                 <input type="submit" value="Send Message">
+
                             </form>
                         </div>
                     </div>
                     <script>
                         function sendEmail(event) {
                             event.preventDefault(); // Prevent default form submission
-                        
                             // Collect form data
-                            const fullname = document.getElementById('name').value.trim();
-                            const email = document.getElementById('email').value.trim();
-                            const mobileno = document.getElementById('mobileno').value.trim();
-                            const subject = document.getElementById('subject').value.trim();
-                            const message = document.getElementById('msg').value.trim();
-                        
-                            // Basic validation
-                            if (!fullname || !email || !mobileno || !subject || !message) {
-                                alert("Please fill in all fields.");
-                                return;
-                            }
-                        
-                            // Validate email format
-                            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                            if (!emailPattern.test(email)) {
-                                alert("Please enter a valid email address.");
-                                return;
-                            }
-                        
+                            const fullname = document.getElementById('name').value;
+                            const email = document.getElementById('email').value;
+                            const mobileno = document.getElementById('mobileno').value;
+                            const subject = document.getElementById('subject').value;
+                            const message = document.getElementById('msg').value;
                             // Construct the mailto link
-                            const mailtoLink = `mailto:kiruphakarnarasimman@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-                                `Name: ${fullname}\nEmail: ${email}\nMobile No: ${mobileno}\n\nMessage:\n${message}`
+                            const mailtoLink = `kiruphakarnarasimman@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+                                `Name: ${name}\nEmail: ${email}\nMobile No: ${mobileno}\n\nMessage:\n${msg}`
                             )}`;
-                        
+                            
                             // Open the mailto link
                             window.location.href = mailtoLink;
-                        }
+                            }
                     </script>
-            </section>
-            <!-- End of Contact Section -->
-
+              </section>
               
 
         </main>
-        <!-- End of Main Section -->
-         
         <i class='bx bxs-chevrons-up'id="up-arrow" ></i>
         <script>
-             // Scroll to the home section when the up-arrow is clicked 
+            // Scroll to the home section when the up-arrow is clicked 
             document.getElementById('up-arrow').addEventListener('click', function() { 
-                document.getElementById('home').scrollIntoView({ behavior: 'smooth' }); 
+            document.getElementById('home').scrollIntoView({ behavior: 'smooth' }); 
             });
 
             // Show/hide the up-arrow based on scroll position
             window.addEventListener('scroll', function() {
-                const upArrow = document.getElementById('up-arrow');
-                if (window.scrollY === 0) { // Check if at the top of the page
-                    upArrow.style.display = 'none'; // Hide the up-arrow
-                } else {
-                    upArrow.style.display = 'block'; // Show the up-arrow
-                }
+            const upArrow = document.getElementById('up-arrow');
+            if (window.scrollY === 0) { // Check if at the top of the page
+                upArrow.style.display = 'none'; // Hide the up-arrow
+            } else {
+                upArrow.style.display = 'block'; // Show the up-arrow
+            }
             });
-        </script>
+       </script>
          <!-- Typed.JS file(For Typing Effect) -->
           <script src="script2.js"></script>
        <!-- script -->
@@ -659,3 +637,4 @@
         <script src="https://kit.fontawsome.com/aa5f332820.js" crossorgin="anonymous"></script>
     </body>
 </html>
+

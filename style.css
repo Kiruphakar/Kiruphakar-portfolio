@@ -14,9 +14,9 @@
     --theme:#0a7a82;
     --theme2:#0ef;
     --iconbg:#2C2F3F;
-    --txt:#000000;
+    --txt:#353535;
     --bg:#f7f7f7;
-} 
+}
 
 
 /* Header */
@@ -319,24 +319,6 @@ main{
     margin-top: 25px;
 }
 
-
-/* download resume */
-.download-resume-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--theme);
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    transition: background-color 0.3s;
-}
-
-.download-resume-btn:hover {
-    background-color: #579aff;
-}
-
-
 /* ========About col======== */
 
 #about .about-col .img-col{
@@ -552,10 +534,10 @@ main{
 }
 #skill .skill-row .skill-box .skill-outer-line .skill-inner-line{
     height: 10px;
-    background: linear-gradient(to right, #94c6f8, #579aff,#438ae6);
+    background: var(--theme);
     border-radius: 20px;
 }
-#skill .skill-row .skill-box:hover .skill-outer-line {
+#skill .skill-row .skill-box:hover .skill-outer-line .skill-inner-line{
     height: 10px;
     box-shadow: 0 0 20px var(--theme2);
     border-radius: 20px;

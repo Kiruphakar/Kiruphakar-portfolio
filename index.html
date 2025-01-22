@@ -580,36 +580,37 @@
                         </div>
                         <!-- Right col -->
                         <div class="contact-right">
-                            <h2>To Contact</h2>
-                            <form action="">
-                                <input type="text" name="name" id="name" placeholder="Your Name" required>
-                                <input type="email" name="email" id="email" placeholder="Your Email" required>
-                                <input type="tel" name="mobileno" id="mobileno" placeholder="Mobile No"required>
-                                <input type="text" name="subject" id="subject" placeholder="Subject"required>
-                                <textarea name="msg" id="msg" rows="9" placeholder="Your Message"></textarea>
-                                <input type="submit" value="Send Message">
+    <h2>To Contact</h2>
+    <form onsubmit="SendEmail(event)">
+        <input type="text" name="name" id="name" placeholder="Your Name" required>
+        <input type="email" name="email" id="email" placeholder="Your Email" required>
+        <input type="tel" name="mobileno" id="mobileno" placeholder="Mobile No" required>
+        <input type="text" name="subject" id="subject" placeholder="Subject" required>
+        <textarea name="msg" id="msg" rows="9" placeholder="Your Message"></textarea>
+        <input type="submit" value="Send Email">
+    </form>
+</div>
 
-                            </form>
-                        </div>
-                    </div>
-                    <script>
-                        function sendEmail(event) {
-                            event.preventDefault(); // Prevent default form submission
-                            // Collect form data
-                            const fullname = document.getElementById('name').value;
-                            const email = document.getElementById('email').value;
-                            const mobileno = document.getElementById('mobileno').value;
-                            const subject = document.getElementById('subject').value;
-                            const message = document.getElementById('msg').value;
-                            // Construct the mailto link
-                            const mailtoLink = `kiruphakarnarasimman@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-                                `Name: ${name}\nEmail: ${email}\nMobile No: ${mobileno}\n\nMessage:\n${msg}`
-                            )}`;
-                            
-                            // Open the mailto link
-                            window.location.href = mailtoLink;
-                            }
-                    </script>
+<script>
+    function SendEmail(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Collect form data
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const mobileno = document.getElementById('mobileno').value;
+        const subject = document.getElementById('subject').value;
+        const msg = document.getElementById('msg').value;
+
+        // Construct the mailto link
+        const mailtoLink = `mailto:kiruphakarnarasimman@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+            `Name: ${name}\nEmail: ${email}\nMobile No: ${mobileno}\n\nMessage:\n${msg}`
+        )}`;
+
+        // Open the mailto link
+        window.location.href = mailtoLink;
+    }
+</script>
               </section>
               
 
